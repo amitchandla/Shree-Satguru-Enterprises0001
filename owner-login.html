@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Owner Login | Shree Satguru Enterprises</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  body.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, var(--color-navy-900), var(--color-navy-800));
+    padding: 24px;
+  }
+  .login-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-hover);
+  }
+  .login-brand { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 22px; }
+  .login-card h1 { font-size: 1.4rem; text-align: center; margin-bottom: 4px; }
+  .login-card .sub { text-align: center; color: var(--color-body); font-size: .92rem; margin-bottom: 26px; }
+  .back-link { display: block; text-align: center; margin-top: 20px; font-size: .88rem; color: var(--color-navy-800); }
+</style>
+</head>
+<body class="login-body">
+
+<div class="login-card">
+  <div class="login-brand">
+    <span class="brand-mark">SSE</span>
+  </div>
+  <h1>Owner Login</h1>
+  <p class="sub">Sign in to manage Shree Satguru Enterprises</p>
+
+  <div class="form-alert" data-login-alert></div>
+
+  <form data-login-form novalidate>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="username" />
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autocomplete="current-password" />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+  </form>
+
+  <a href="index.html" class="back-link">&larr; Back to website</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Owner Dashboard | Shree Satguru Enterprises</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+<body class="dash-body">
+
+<div class="dash-shell">
+  <aside class="dash-sidebar">
+    <div class="dash-brand">
+      <span class="brand-mark">SSE</span>
+      <div>
+        <strong>Owner Panel</strong>
+        <span>Shree Satguru</span>
+      </div>
+    </div>
+    <nav class="dash-nav" aria-label="Dashboard navigation">
+      <button data-panel-target="overview" class="active">Dashboard</button>
+      <button data-panel-target="gallery">Gallery</button>
+      <button data-panel-target="business">Business Details</button>
+      <button data-panel-target="location">Location</button>
+      <button data-panel-target="inquiries">Customer Inquiries</button>
+      <button data-panel-target="account">Account</button>
+    </nav>
+    <div class="dash-logout">
+      <button data-logout>Logout</button>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button class="hamburger dash-mobile-toggle" data-dash-mobile-toggle aria-label="Toggle sidebar"><span></span><span></span><span></span></button>
+        <h1>Owner Dashboard</h1>
+      </div>
+      <div class="dash-user-chip"><span class="dot"></span><span data-dash-user-chip>Signed in</span></div>
+    </div>
+
+    <!-- Overview -->
+    <section class="dash-panel active" data-panel="overview">
+      <div class="summary-cards">
+        <div class="summary-card">
+          <div class="num" data-count-photos>—</div>
+          <div class="label">Total Photos</div>
+        </div>
+        <div class="summary-card">
+          <div class="num" data-count-videos>—</div>
+          <div class="label">Total Videos</div>
+        </div>
+        <div class="summary-card">
+          <div class="num" data-count-inquiries>—</div>
+          <div class="label">Total Customer Inquiries</div>
+        </div>
+      </div>
+      <div class="panel-card">
+        <h2>Welcome back</h2>
+        <p>Use the sidebar to manage your gallery, update business details, set your Google Maps location link, and review customer inquiries. Changes you save here appear on the public website immediately.</p>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="dash-panel" data-panel="gallery">
+      <div class="panel-card">
+        <h2>Upload Media</h2>
+        <div class="form-alert" data-media-alert></div>
+        <form data-media-upload-form>
+          <div class="dash-form-grid">
+            <div class="field full">
+              <label for="media_file">Photo or Video File</label>
+              <div class="upload-drop">
+                <p>JPG, JPEG, PNG, WEBP, MP4 or WEBM — up to 50MB</p>
+                <input type="file" id="media_file" name="media_file" accept=".jpg,.jpeg,.png,.webp,.mp4,.webm" required />
+                <div class="progress-bar" data-upload-progress><div></div></div>
+              </div>
+            </div>
+            <div class="field">
+              <label for="media_title">Title</label>
+              <input type="text" id="media_title" name="title" placeholder="e.g. Paint Section" />
+            </div>
+            <div class="field">
+              <label for="media_description">Description</label>
+              <input type="text" id="media_description" name="description" placeholder="Optional short description" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Upload Media</button>
+        </form>
+      </div>
+
+      <div class="panel-card">
+        <h2>Manage Gallery</h2>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr><th>Preview</th><th>Details</th><th>Type</th><th>Actions</th></tr>
+            </thead>
+            <tbody data-media-table-body>
+              <tr class="empty-row"><td colspan="4">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Details -->
+    <section class="dash-panel" data-panel="business">
+      <div class="panel-card">
+        <h2>Business Details</h2>
+        <div class="form-alert" data-business-alert></div>
+        <form data-business-form>
+          <div class="dash-form-grid">
+            <div class="field">
+              <label for="business_name">Business Name</label>
+              <input type="text" id="business_name" name="business_name" required />
+            </div>
+            <div class="field">
+              <label for="owner_name">Owner Name</label>
+              <input type="text" id="owner_name" name="owner_name" required />
+            </div>
+            <div class="field full">
+              <label for="description">Business Description</label>
+              <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="field">
+              <label for="phone_primary">Primary Phone</label>
+              <input type="tel" id="phone_primary" name="phone_primary" required />
+            </div>
+            <div class="field">
+              <label for="phone_secondary">Secondary Phone</label>
+              <input type="tel" id="phone_secondary" name="phone_secondary" />
+            </div>
+            <div class="field">
+              <label for="whatsapp_number">WhatsApp Number</label>
+              <input type="tel" id="whatsapp_number" name="whatsapp_number" required />
+            </div>
+            <div class="field full">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" rows="2"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Business Details</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="dash-panel" data-panel="location">
+      <div class="panel-card">
+        <h2>Location Management</h2>
+        <p>Paste your Google Maps share link. The "Get Directions" button on the public website will use this link.</p>
+        <div class="form-alert" data-location-alert></div>
+        <form data-location-form>
+          <div class="field">
+            <label for="location_url">Google Maps Link</label>
+            <input type="url" id="location_url" name="location_url" placeholder="https://maps.app.goo.gl/..." />
+          </div>
+          <button type="submit" class="btn btn-primary">Save Location Link</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Inquiries -->
+    <section class="dash-panel" data-panel="inquiries">
+      <div class="panel-card">
+        <h2>Customer Inquiries</h2>
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr><th>Name</th><th>Phone</th><th>Message</th><th>Date &amp; Time</th></tr>
+            </thead>
+            <tbody data-inquiries-table-body>
+              <tr class="empty-row"><td colspan="4">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account -->
+    <section class="dash-panel" data-panel="account">
+      <div class="panel-card">
+        <h2>Account</h2>
+        <p><strong>Signed in as:</strong> <span data-account-email>—</span></p>
+        <p><strong>Role:</strong> Owner</p>
+        <button class="btn btn-danger" data-logout>Logout</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

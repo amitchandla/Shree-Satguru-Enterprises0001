@@ -1,0 +1,15 @@
+# Local Supabase credentials — never commit real keys
+assets/js/config.js
+
+# Environment files
+.env
+.env.local
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
