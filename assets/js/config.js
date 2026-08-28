@@ -7,6 +7,6 @@
    ANON key belongs here, never the Service Role key.
    ========================================================= */
 window.__SSE_CONFIG__ = {
-  SUPABASE_URL: "https://YOUR-PROJECT-REF.supabase.co",
-  SUPABASE_ANON_KEY: "YOUR-SUPABASE-ANON-KEY",
+  SUPABASE_URL: "https://jcibeunslicdlrbtewzc.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_DTu8jNDZ28l_5J7mJMUDxg_opGtyOQ7",
 };
